@@ -38,7 +38,7 @@ const WhyChooseSection = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: "url('/whyus.png')" }} // ✅ Using public folder image
+        style={{ backgroundImage: "url('/whyus.png')" }} 
       >
         <div className="absolute inset-0"></div>
       </div>
@@ -54,7 +54,8 @@ const WhyChooseSection = () => {
             <p className="text-base md:text-lg max-w-2xl mx-auto text-gray-600">
               We offer advanced AI-focused App Optimization solutions to help your app boost core metrics in the most advanced way.
             </p>
-          </div>
+          </div> 
+
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
