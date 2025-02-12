@@ -12,8 +12,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ASOWin | Optimize Your App</title>
         <meta name="description" content="Discover how ASOWin helps you optimize your app store presence and increase visibility. Learn more about our services and case studies." />
+        <title>ASOWin | Optimize Your App</title>
+
       </Head>
       <main>
         {/* <Navbar /> */}
