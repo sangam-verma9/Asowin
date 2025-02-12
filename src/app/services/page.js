@@ -9,6 +9,7 @@ import PricingSection from "../components/PricingSection";
 import Quality from "../components/Quality";
 import WhyASO from "../components/WhyAso";
 import Footer from "../components/Footer";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 
 const ServicesPage = () => {
@@ -25,6 +26,7 @@ const ServicesPage = () => {
           name="keywords"
           content="aso, app store optimisation, app reputation, creative a/b testing, design, keyword install, aso solution, automated aso, user acquisition, search ad aso, competitor analysis, keyword research."
         />
+        <GoogleAnalytics/>
       </Head>
 
       {/* Page components */}

@@ -5,6 +5,7 @@ import AboutSection from "../components/AboutSection";
 import WhyChooseSection from "../components/WhyChooseSection";
 import GetStarted from "../components/GetStarted";
 import Footer from "../components/Footer";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 const About = () => {
     return (
@@ -20,6 +21,8 @@ const About = () => {
                     name="keywords"
                     content="aso, app store optimisation, app reputation, creative a/b testing, design, keyword install, aso solution, automated aso, user acquisition, search ad aso, competitor analysis, keyword research."
                 />
+
+                <GoogleAnalytics/>
             </Head>
 
             {/* Page Components */}

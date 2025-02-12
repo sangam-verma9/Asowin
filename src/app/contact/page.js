@@ -4,6 +4,7 @@ import GetStarted from "../components/GetStarted";
 import Footer from "../components/Footer";
 import ContactHero from "../components/ContactHero";
 import Faq from "../components/Faq";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 const Contact = () => {
     return (
@@ -19,6 +20,8 @@ const Contact = () => {
                     name="keywords"
                     content="aso, app store optimisation, app reputation, creative a/b testing, design, keyword install, aso solution, automated aso, user acquisition, search ad aso, competitor analysis, keyword research."
                 />
+
+                <GoogleAnalytics/>
             </Head>
 
             {/* Page Components */}

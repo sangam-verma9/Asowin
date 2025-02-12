@@ -20,6 +20,7 @@
 import './globals.css'
 import IntercomProvider from './components/IntercomProvider'
 import Head from 'next/head'
+import GoogleAnalytics from './components/GoogleAnalytics';
 
 export default function RootLayout({ children }) {
   return (
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <title>ASOWin | Optimize Your App</title>
         <meta name="description" content="Boost your app’s performance with ASOWin, the best app store optimization tool." />
         <link rel="icon" type="image/png" href="/favicon.ico" />
+        <GoogleAnalytics/>
       </Head>
       <body>
         <IntercomProvider />
