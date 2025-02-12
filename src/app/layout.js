@@ -17,20 +17,16 @@
 
 
 
-// src/app/layout.js
 import './globals.css'
 import IntercomProvider from './components/IntercomProvider'
 import Head from 'next/head'
 
-export const metadata = {
-  title: 'ASOWin',
-  description: 'Your app description',
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>  {/* Correct Next.js Head Usage */}
+      <Head>
+        <title>ASOWin | Optimize Your App</title>
+        <meta name="description" content="Boost your app’s performance with ASOWin, the best app store optimization tool." />
         <link rel="icon" type="image/png" href="/favicon.ico" />
       </Head>
       <body>

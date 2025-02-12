@@ -109,7 +109,7 @@ export default function Contact() {
       <div className="w-full lg:w-[60%] flex items-center justify-center p-8">
         <div className="w-full max-w-lg">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h1 className="text-4xl md:text-[60px] font-serif mb-8">Contact Us</h1>
+            <h2 className="text-4xl md:text-[60px] font-serif mb-8">Contact Us</h2>
 
             {status.message && (
               <div

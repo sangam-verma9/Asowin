@@ -26,9 +26,9 @@ const Stats = () => {
       {/* Content container */}
       <div className="container mx-auto h-full px-4 py-8 lg:py-0">
         <div className="max-w-4xl mx-auto text-center h-full flex flex-col justify-center">
-          <h1 className="text-3xl md:text-4xl lg:text-[39px] font-medium font-serif text-[#1A1A1A] mb-6 px-4">
+          <h2 className="text-3xl md:text-4xl lg:text-[39px] font-medium font-serif text-[#1A1A1A] mb-6 px-4">
             Rank Highest For Your Keywords
-          </h1>
+          </h2>
           
           <p className="text-[#1A1A1A] font-normal text-base md:text-lg lg:text-xl mb-8 lg:mb-12 max-w-3xl mx-auto px-4">
             Some incredible numbers witnessed across the globe for multiple clients in different locations, across different App categories:

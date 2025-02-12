@@ -61,11 +61,11 @@ const AIAgent = () => {
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-12 flex flex-col lg:flex-row items-start gap-16">
         {/* Left Section with Heading */}
         <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-[#FF6B00] text-4xl md:text-5xl lg:text-[45px] xl:text-6xl font-normal leading-tight">
+          <h2 className="text-[#FF6B00] text-4xl md:text-5xl lg:text-[45px] xl:text-6xl font-normal leading-tight">
             ASOWin's AI Agent:<br />
             Revolutionizing App<br />
             Store Optimization
-          </h1>
+          </h2>
         </div>
 
         {/* Right Section with Description, Button, and Cards */}

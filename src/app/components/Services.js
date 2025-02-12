@@ -49,9 +49,9 @@ const Services = () => {
   return (
     <div className="w-full px-4 py-16 max-w-[90rem] mx-auto">
       {/* Main Heading */}
-      <h1 className="text-4xl md:text-[80px] font-medium font-serif text-center mb-12">
+      <h2 className="text-4xl md:text-[80px] font-medium font-serif text-center mb-12">
         Services We Provide
-      </h1>
+      </h2>
 
       {/* Main Content Box */}
       <div className="bg-[#014458] rounded-2xl p-4 sm:p-8 md:p-12 text-white relative overflow-hidden h-auto md:h-[500px]">
