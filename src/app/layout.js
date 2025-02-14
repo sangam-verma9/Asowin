@@ -22,14 +22,19 @@ import IntercomProvider from './components/IntercomProvider'
 import Head from 'next/head'
 import GoogleAnalytics from './components/GoogleAnalytics';
 
+export const metadata = {
+  title: "ASOWin | Optimize Your App",
+  description: "Boost your app’s performance with ASOWin, the best app store optimization tool.",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <title>ASOWin | Optimize Your App</title>
-        <meta name="description" content="Boost your app’s performance with ASOWin, the best app store optimization tool." />
+        {/* <title>ASOWin | Optimize Your App</title>
+        <meta name="description" content="Boost your app’s performance with ASOWin, the best app store optimization tool." /> */}
         <link rel="icon" type="image/png" href="/favicon.ico" />
-        <GoogleAnalytics/>
+        <GoogleAnalytics />
       </Head>
       <body>
         <IntercomProvider />
