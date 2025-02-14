@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    output: "export", // Enables static HTML export
+    images: {
+      unoptimized: true, // Required for Next.js Image component to work with static export
+    },
+  };
+  
+  export default nextConfig;
