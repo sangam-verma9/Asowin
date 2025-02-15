@@ -1,8 +1,28 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // Add this import
+import Link from "next/link";
+import { Loader2 } from "lucide-react";
 
 const Footer = () => {
+  const [isLoading, setIsLoading] = useState({
+    book: false,
+    blog: false
+  });
+
+  const handleExternalLink = async (type, url) => {
+    setIsLoading(prev => ({ ...prev, [type]: true }));
+    
+    // Open URLs directly since they're external resources
+    window.open(url, '_blank', 'noopener,noreferrer');
+    
+    // Reset loading state after a short delay
+    setTimeout(() => {
+      setIsLoading(prev => ({ ...prev, [type]: false }));
+    }, 500);
+  };
+
   return (
     <footer className="w-full">
       <div
@@ -25,6 +45,7 @@ const Footer = () => {
                 width={200}
                 height={100}
                 className="w-[150px] h-auto sm:w-[180px] md:w-[200px]"
+                priority
               />
             </div>
 
@@ -36,22 +57,22 @@ const Footer = () => {
               >
                 SERVICES
               </Link>
-              <a
-                href="https://asowin.com/ASOWinBook.pdf"
-                className="text-white hover:text-[#FFB842] text-sm font-semibold whitespace-nowrap"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => handleExternalLink('book', 'https://asowin.com/ASOWinBook.pdf')}
+                className="text-white hover:text-[#FFB842] text-sm font-semibold whitespace-nowrap flex items-center gap-2 bg-transparent border-none cursor-pointer"
+                disabled={isLoading.book}
               >
                 OUR BOOK
-              </a>
-              <a
-                href="https://asowin.com/blog/"
-                className="text-white hover:text-[#FFB842] text-sm font-semibold whitespace-nowrap"
-                target="_blank"
-                rel="noopener noreferrer"
+                {isLoading.book && <Loader2 className="w-4 h-4 animate-spin" />}
+              </button>
+              <button
+                onClick={() => handleExternalLink('blog', 'https://asowin.com/blog')}
+                className="text-white hover:text-[#FFB842] text-sm font-semibold whitespace-nowrap flex items-center gap-2 bg-transparent border-none cursor-pointer"
+                disabled={isLoading.blog}
               >
                 BLOG
-              </a>
+                {isLoading.blog && <Loader2 className="w-4 h-4 animate-spin" />}
+              </button>
               <Link
                 href="/about"
                 className="text-white hover:text-[#FFB842] text-sm font-semibold whitespace-nowrap"
