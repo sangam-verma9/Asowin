@@ -1,45 +1,59 @@
-// // src/app/layout.js
-// // import Navbar from './components/Navbar';
-// import './globals.css'
-// // import IntercomProvider from '@/components/IntercomProvider'
-
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//       <body>
-//         {/* <IntercomProvider /> */}
-//         {/* <Navbar /> */}
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
 
 
 
-import './globals.css'
-import IntercomProvider from './components/IntercomProvider'
-import Head from 'next/head'
-import GoogleAnalytics from './components/GoogleAnalytics';
+import "./globals.css";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata = {
-  title: "ASOWin | Optimize Your App",
-  description: "Boost your app’s performance with ASOWin, the best app store optimization tool.",
+  title: "ASOWin | App Store Optimization for Apps - Leading Global Company",
+  description:
+    "Discover how ASOWin helps you optimize your app store presence and increase visibility. Learn more about our services and case studies.",
+  keywords:
+    "SEO Agency, ASO, ASOWin, App Store Optimization, Mobile Growth, App Marketing",
+  authors: [{ name: "ASOWin", url: "https://www.asowin.com" }],
+  robots: "index, follow",
+  openGraph: {
+    title: "ASOWin | App Store Optimization for Apps - Leading Global Company",
+    description:
+      "Discover how ASOWin helps you optimize your app store presence and increase visibility.",
+    url: "https://www.asowin.com",
+    siteName: "ASOWin",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ASOWin Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ASOWin | App Store Optimization for Apps - Leading Global Company",
+    description:
+      "Discover how ASOWin helps you optimize your app store presence and increase visibility.",
+    images: ["/og-image.jpg"],
+    site: "@asowin",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        {/* <title>ASOWin | Optimize Your App</title>
-        <meta name="description" content="Boost your app’s performance with ASOWin, the best app store optimization tool." /> */}
-        <link rel="icon" type="image/png" href="/favicon.ico" />
-        <GoogleAnalytics />
-      </Head>
       <body>
-        <IntercomProvider />
+        {/* Google Analytics */}
+        <GoogleAnalytics />
+
+        {/* Intercom Live Chat */}
+        {/* <IntercomProvider /> */}
+
         {children}
       </body>
     </html>
   );
 }
+

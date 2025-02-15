@@ -1,38 +1,62 @@
-import React from "react";
-import Head from "next/head";
-import GetStarted from "../components/GetStarted";
-import Footer from "../components/Footer";
+// import React from "react";
+// import Head from "next/head";
+// import GetStarted from "../components/GetStarted";
+// import Footer from "../components/Footer";
+// import ContactHero from "../components/ContactHero";
+// import Faq from "../components/Faq";
+// import GoogleAnalytics from "../components/GoogleAnalytics";
+
+// const Contact = () => {
+//     return (
+//         <div className="min-h-screen">
+//             {/* Next.js Head for SEO Metadata */}
+//             <Head>
+//                 <title>Contact - App Store Optimization - ASOWin</title>
+//                 <meta
+//                     name="description"
+//                     content="Get in touch with ASOWin! Reach out to our team for expert ASO solutions, and personalized strategies to boost your app's performance. Let’s connect and grow together!"
+//                 />
+//                 <meta
+//                     name="keywords"
+//                     content="aso, app store optimisation, app reputation, creative a/b testing, design, keyword install, aso solution, automated aso, user acquisition, search ad aso, competitor analysis, keyword research."
+//                 />
+
+//                 <GoogleAnalytics/>
+//             </Head>
+
+//             {/* Page Components */}
+//             <ContactHero />
+//             <Faq />
+//             <GetStarted />
+//             <Footer />
+
+
+//         </div>
+//     );
+// };
+
+// export default Contact;
+
+
 import ContactHero from "../components/ContactHero";
 import Faq from "../components/Faq";
+import GetStarted from "../components/GetStarted";
+import Footer from "../components/Footer";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 
 const Contact = () => {
-    return (
-        <div className="min-h-screen">
-            {/* Next.js Head for SEO Metadata */}
-            <Head>
-                <title>Contact - App Store Optimization - ASOWin</title>
-                <meta
-                    name="description"
-                    content="Get in touch with ASOWin! Reach out to our team for expert ASO solutions, and personalized strategies to boost your app's performance. Let’s connect and grow together!"
-                />
-                <meta
-                    name="keywords"
-                    content="aso, app store optimisation, app reputation, creative a/b testing, design, keyword install, aso solution, automated aso, user acquisition, search ad aso, competitor analysis, keyword research."
-                />
+  return (
+    <div className="min-h-screen">
+      {/* Google Analytics */}
+      <GoogleAnalytics />
 
-                <GoogleAnalytics/>
-            </Head>
-
-            {/* Page Components */}
-            <ContactHero />
-            <Faq />
-            <GetStarted />
-            <Footer />
-
-
-        </div>
-    );
+      {/* Page Components */}
+      <ContactHero />
+      <Faq />
+      <GetStarted />
+      <Footer />
+    </div>
+  );
 };
 
 export default Contact;
