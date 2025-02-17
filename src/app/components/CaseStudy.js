@@ -193,17 +193,18 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 import { Loader2 } from "lucide-react";
+import Link from "next/link";
 
 
-// Skeleton Loader Component
 const ImageSkeleton = () => (
   <div className="w-full h-full">
-    <Image 
-      src="/skeleton.png" 
-      alt="Loading skeleton" 
-      layout="fill" 
-      objectFit="contain" 
+    <Image
+      src="/skeleton.png"
+      alt="Loading skeleton"
+      layout="fill"
+      objectFit="contain"
       priority
     />
   </div>
@@ -277,11 +278,10 @@ const CaseStudy = () => {
                 setImageLoading(true);
                 setActiveCase(study);
               }}
-              className={`whitespace-nowrap text-sm sm:text-[16px] font-medium pb-4 ${
-                activeCase === study
+              className={`whitespace-nowrap text-sm sm:text-[16px] font-medium pb-4 ${activeCase === study
                   ? "border-b-2 border-[#014458] text-[#014458]"
                   : "text-[#014458] hover:text-[#014458]/80"
-              }`}
+                }`}
             >
               CASE STUDY {study}
             </button>
@@ -296,20 +296,20 @@ const CaseStudy = () => {
           <div className="flex gap-4 mb-8 lg:mb-16">
             {/* Logo container */}
             {/* Logo container with conditional skeleton rendering */}
-<div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-xl flex items-center justify-center overflow-hidden">
-  {imageLoading ? (
-    // Skeleton for logo (icon)
-    <div className="w-12 h-12 bg-gray-300 rounded-[10px] animate-pulse" />
-  ) : (
-    <Image
-      src={activeData.logo}
-      alt={`${activeData.title} logo`}
-      width={48}
-      height={48}
-      className="object-contain"
-    />
-  )}
-</div>
+            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-xl flex items-center justify-center overflow-hidden">
+              {imageLoading ? (
+                // Skeleton for logo (icon)
+                <div className="w-12 h-12 bg-gray-300 rounded-[10px] animate-pulse" />
+              ) : (
+                <Image
+                  src={activeData.logo}
+                  alt={`${activeData.title} logo`}
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+              )}
+            </div>
 
             {/* Content container */}
             <div className="flex-grow">
@@ -319,12 +319,12 @@ const CaseStudy = () => {
               <p className="text-sm sm:text-[16px] mt-3 sm:mt-5 text-black/80">
                 {activeData.subtitle}
               </p>
-              <button
-                className="bg-[#FF6B00] text-white px-6 sm:px-8 py-2.5 sm:py-3 mt-4 sm:mt-5 rounded-full text-sm font-medium hover:bg-[#FF6B00]/90 transition-colors"
-                onClick={() => window.location.href = `/casestudy${parseInt(activeCase, 10)}`}
-              >
-                READ THE CASE STUDY
-              </button>
+              <Link 
+  href={`/casestudy${parseInt(activeCase, 10)}`}
+  className="inline-block bg-[#FF6B00] text-white px-6 sm:px-8 py-2.5 sm:py-3 mt-4 sm:mt-5 rounded-full text-sm font-medium hover:bg-[#FF6B00]/90 transition-colors"
+>
+  READ THE CASE STUDY
+</Link>
             </div>
           </div>
 
@@ -374,13 +374,12 @@ const CaseStudy = () => {
                 <ImageSkeleton />
               </div>
             )}
-            <Image 
+            <Image
               src={activeData.image}
               alt={`${activeData.title} interface showcase`}
               fill
-              className={`object-contain transition-opacity duration-300 ${
-                imageLoading ? 'opacity-0' : 'opacity-100'
-              }`}
+              className={`object-contain transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'
+                }`}
               onLoad={() => setImageLoading(false)}
               priority
             />
