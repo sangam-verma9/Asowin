@@ -295,15 +295,22 @@ const CaseStudy = () => {
         <div className="w-full px-4 sm:px-[80px] lg:w-[480px] xl:w-[580px] lg:pl-[80px] lg:pr-8">
           <div className="flex gap-4 mb-8 lg:mb-16">
             {/* Logo container */}
-            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-xl flex items-center justify-center overflow-hidden">
-              <Image 
-                src={activeData.logo}
-                alt={`${activeData.title} logo`}
-                width={48}
-                height={48}
-                className="object-contain"
-              />
-            </div>
+            {/* Logo container with conditional skeleton rendering */}
+<div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-xl flex items-center justify-center overflow-hidden">
+  {imageLoading ? (
+    // Skeleton for logo (icon)
+    <div className="w-12 h-12 bg-gray-300 rounded-[10px] animate-pulse" />
+  ) : (
+    <Image
+      src={activeData.logo}
+      alt={`${activeData.title} logo`}
+      width={48}
+      height={48}
+      className="object-contain"
+    />
+  )}
+</div>
+
             {/* Content container */}
             <div className="flex-grow">
               <h2 className="text-3xl sm:text-[56px] leading-tight font-semibold lg:-mt-3">
@@ -385,3 +392,7 @@ const CaseStudy = () => {
 };
 
 export default CaseStudy;
+
+
+
+
