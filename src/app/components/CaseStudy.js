@@ -279,8 +279,8 @@ const CaseStudy = () => {
                 setActiveCase(study);
               }}
               className={`whitespace-nowrap text-sm sm:text-[16px] font-medium pb-4 ${activeCase === study
-                  ? "border-b-2 border-[#014458] text-[#014458]"
-                  : "text-[#014458] hover:text-[#014458]/80"
+                ? "border-b-2 border-[#014458] text-[#014458]"
+                : "text-[#014458] hover:text-[#014458]/80"
                 }`}
             >
               CASE STUDY {study}
@@ -319,12 +319,12 @@ const CaseStudy = () => {
               <p className="text-sm sm:text-[16px] mt-3 sm:mt-5 text-black/80">
                 {activeData.subtitle}
               </p>
-              <Link 
-  href={`/casestudy${parseInt(activeCase, 10)}`}
-  className="inline-block bg-[#FF6B00] text-white px-6 sm:px-8 py-2.5 sm:py-3 mt-4 sm:mt-5 rounded-full text-sm font-medium hover:bg-[#FF6B00]/90 transition-colors"
->
-  READ THE CASE STUDY
-</Link>
+              <Link
+                href={`/casestudy${parseInt(activeCase, 10)}`}
+                className="inline-block bg-[#FF6B00] text-white px-6 sm:px-8 py-2.5 sm:py-3 mt-4 sm:mt-5 rounded-full text-sm font-medium hover:bg-[#FF6B00]/90 transition-colors"
+              >
+                READ THE CASE STUDY
+              </Link>
             </div>
           </div>
 
@@ -353,17 +353,21 @@ const CaseStudy = () => {
               className="p-2 rounded-full bg-[#004258] text-white hover:bg-[#004258]/90 transition-colors disabled:opacity-50"
               onClick={handlePrev}
               disabled={activeCase === "01"}
+              aria-label="Previous case"
             >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
             </button>
+
             <button
               className="p-2 rounded-full bg-[#004258] text-white hover:bg-[#004258]/90 transition-colors disabled:opacity-50"
               onClick={handleNext}
               disabled={activeCase === "03"}
+              aria-label="Next case"
             >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
             </button>
           </div>
+
         </div>
 
         {/* Right Section - App Screenshots with Skeleton Loading */}

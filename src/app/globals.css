@@ -1,33 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
-
-
-
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
+/* Font optimization - loaded via preload in layout.js */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: 'Manrope', sans-serif;
-
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* globals.css */
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
 
+/* Optimize animations */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -39,5 +29,18 @@ body {
 
 .animate-scroll {
   animation: scroll 20s linear infinite;
+  will-change: transform;
+}
+
+/* Optimize images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reduce layout shift */
+.hero-section {
+  min-height: 100vh;
+  contain: layout style paint;
 }
 

@@ -1,7 +1,7 @@
 "use client"; // Ensure interactivity in Next.js app
 
 import { useState } from "react";
-import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 import Navbar from "./Navbar";
 
 const HeroSection = () => {
@@ -61,7 +61,7 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-50"
           style={{
-            backgroundImage: `url('/pattern.png')`, // ✅ Correct Next.js path for public assets
+            backgroundImage: `url('/pattern.png')`,
             zIndex: "0",
           }}
         />

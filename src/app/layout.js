@@ -1,8 +1,10 @@
 import "./globals.css";
-import GoogleAnalytics from "./components/GoogleAnalytics";
 import Script from "next/script";
+import ServiceWorker from "./components/ServiceWorker";
+import PerformanceMonitor from "./components/PerformanceMonitor";
 
 export const metadata = {
+  metadataBase: new URL('https://www.asowin.com'),
   title: "ASOWin | App Store Optimization for Apps - Leading Global Company",
   description:
     "Discover how ASOWin helps you optimize your app store presence and increase visibility. Learn more about our services and case studies.",
@@ -36,13 +38,39 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Preload critical fonts */}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+          as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
+
+        {/* Resource hints for performance */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Preload critical images */}
+        <link rel="preload" as="image" href="/pattern.png" />
+        <link rel="preload" as="image" href="/appversal.png" />
+
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="beforeInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -63,13 +91,9 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-        {/* Google Analytics */}
-        <GoogleAnalytics />
-
-        {/* Intercom Live Chat */}
-        {/* <IntercomProvider /> */}
-
         {children}
+        <ServiceWorker />
+        <PerformanceMonitor />
       </body>
     </html>
   );

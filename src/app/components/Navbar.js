@@ -13,13 +13,13 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <span className="text-2xl font-bold">
-          <Image
-  height={38}
-  width={118}
-  className="w-[100px] md:w-[118px] 2xl:w-[140px] h-auto"
-  src="/ASOWin.png"  
-  alt="Logo"
-/>
+            <Image
+              height={38}
+              width={118}
+              className="w-[100px] md:w-[118px] 2xl:w-[140px] h-auto"
+              src="/ASOWin.png"
+              alt="Logo"
+            />
 
           </span>
         </div>
@@ -78,11 +78,13 @@ const Navbar = () => {
         <button
           className="md:hidden text-gray-800 focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           <svg
             className="w-6 h-6"
             fill="none"
             stroke="currentColor"
+            aria-hidden="true"
             viewBox="0 0 24 24"
           >
             <path
@@ -130,7 +132,7 @@ const Navbar = () => {
                 href="/about"
                 className="px-6 py-2 text-[#111111] hover:text-black"
               >
-                ABOUT 
+                ABOUT
               </Link>
               <Link
                 href="/contact"
