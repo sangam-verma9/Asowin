@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "ANALYZE=true npm run build",
+    "build:analyze": "cross-env ANALYZE=true next build",
+    "lighthouse": "lighthouse http://localhost:3000 --output=json --output-path=./lighthouse-report.json",
+    "performance": "npm run build && npm run lighthouse",
+    "optimize-images": "node scripts/optimize-images.js",
+    "convert-images": "node scripts/convert-images.js"
   },
   "dependencies": {
     "@intercom/messenger-js-sdk": "^0.0.14",
@@ -19,8 +25,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.1.6",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
+    "lighthouse": "^11.6.0",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.1"
   }

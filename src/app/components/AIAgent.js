@@ -107,16 +107,19 @@ const AIAgent = () => {
             <button
               className="p-2 rounded-full bg-[#004258] text-white hover:bg-opacity-90 transition-colors"
               onClick={handlePrev}
+              aria-label="Previous slide"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={24} aria-hidden="true" />
             </button>
             <button
               className="p-2 rounded-full bg-[#004258] text-white hover:bg-opacity-90 transition-colors"
               onClick={handleNext}
+              aria-label="Next slide"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={24} aria-hidden="true" />
             </button>
           </div>
+
         </div>
       </div>
     </div>
