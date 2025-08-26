@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const CaseStudy1Stats = () => {
@@ -28,9 +29,12 @@ const CaseStudy1Stats = () => {
       {/* Right Section */}
       <div className="w-full md:w-[55%] bg-gray-200 p-6 flex items-center justify-center overflow-hidden">
         <div className="relative w-full max-w-2xl">
-          <img
+          <Image
             src="/blogphone1.png"
             alt="Phone mockups group"
+            width={800}
+            height={600}
+            priority
             className="w-full h-auto object-contain"
           />
         </div>

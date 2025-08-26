@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Navbar from "./Navbar";
 
 const CaseStudy2Hero = () => {
@@ -8,12 +9,15 @@ const CaseStudy2Hero = () => {
       <Navbar />
       
       {/* Background Image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/blogbg2.png')`, // Image referenced from the public folder
-        }}
-      />
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/blogbg2.png"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />

@@ -4,7 +4,7 @@ const ASOSection = () => {
   return (
     <section className="relative w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] bg-[#FAFAFA] mb-[50px]">
       {/* Background image */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full"
         style={{
           backgroundImage: `url('/asosection.png')`, // Image path adjusted for Next.js (in public folder)
@@ -53,16 +53,16 @@ const ASOSection = () => {
           </div>
 
           {/* Right content - Key Deliverables */}
-          <div className="lg:max-w-xs mt-8 sm:mt-12 lg:mt-auto">
-            <h2 className="text-white text-[18px] sm:text-[20px] lg:text-[24px] font-normal mb-4 sm:mb-6">Key Deliverables:</h2>
+          <div className="lg:max-w-lg mt-8 sm:mt-12 lg:mt-auto lg:pr-20">
+            <h2 className="text-white text-[18px] sm:text-[20px] lg:text-[24px] font-bold mb-4 sm:mb-6">Key Deliverables:</h2>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li className="text-[#E06F00] text-[9px] sm:text-[10px] lg:text-[11px] uppercase font-bold tracking-widest">
+              <li className="text-[#E06F00] text-[9px] sm:text-[12px] lg:text-[14px] uppercase font-bold tracking-widest">
                 • METADATA OPTIMIZATION
               </li>
-              <li className="text-[#E06F00] text-[9px] sm:text-[10px] lg:text-[11px] uppercase font-bold tracking-widest">
+              <li className="text-[#E06F00] text-[9px] sm:text-[12px] lg:text-[14px] uppercase font-bold tracking-widest">
                 • KEYWORD TRACKING AND INSIGHTS
               </li>
-              <li className="text-[#E06F00] text-[9px] sm:text-[10px] lg:text-[11px] uppercase font-bold tracking-widest">
+              <li className="text-[#E06F00] text-[9px] sm:text-[12px] lg:text-[14px] uppercase font-bold tracking-widest">
                 • COMPETITOR ANALYSIS
               </li>
             </ul>
