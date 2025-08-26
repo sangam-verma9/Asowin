@@ -13,10 +13,10 @@ const Footer = () => {
 
   const handleExternalLink = async (type, url) => {
     setIsLoading(prev => ({ ...prev, [type]: true }));
-    
+
     // Open URLs directly since they're external resources
     window.open(url, '_blank', 'noopener,noreferrer');
-    
+
     // Reset loading state after a short delay
     setTimeout(() => {
       setIsLoading(prev => ({ ...prev, [type]: false }));
@@ -31,7 +31,7 @@ const Footer = () => {
           backgroundImage: "url('/footer.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: "500px",
+          height: "350px",
         }}
       >
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
