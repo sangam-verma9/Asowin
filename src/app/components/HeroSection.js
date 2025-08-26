@@ -56,7 +56,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FFEDE3] to-[#FFFFFF]">
+    <div className="max-h-[90vh] bg-gradient-to-b from-[#FFEDE3] to-[#FFFFFF]">
       <Navbar />
 
       <section className="relative flex flex-col justify-center items-center text-center min-h-[calc(100vh-32px)] -mt-16 px-4 md:px-8 lg:px-12">

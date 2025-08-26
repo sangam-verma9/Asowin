@@ -218,7 +218,7 @@ const caseStudyData = {
       { value: "Top #2", label: "Rank" },
       { value: "+12,000", label: "Daily Downloads" },
     ],
-    description: "Boosting Keyword Rankings and Downloads for Easy Phone",
+    description: "Boosting Keyword Rankings and Downloads for Easy Phone<br/><br/>• Achieved top rankings for competitive keywords<br/><br/>• Drove consistent growth in organic installs<br/><br/>• Enhanced visibility across multiple app categories",
     image: "/casestudy.png",
   },
   "01": {
@@ -228,7 +228,7 @@ const caseStudyData = {
       { value: "#1", label: "Rankings" },
       { value: "Keywords", label: " Success" },
     ],
-    description: "• Ranked highest for category keyword<br/><br/>• 10x increase in total rate",
+    description: "• Ranked highest for category keyword<br/><br/>• 10x increase in total rate<br/><br/>• Significant boost in organic visibility",
     image: "/casestudy2.png",
   },
   "02": {
@@ -238,7 +238,7 @@ const caseStudyData = {
       { value: "50+", label: "keywords" },
       { value: "Visibility", label: "Success Rate" },
     ],
-    description: "• Managed month on month ASO for Indiabulls Securities<br/><br/>• Ranked for more than 25+ unranked keywords",
+    description: "• Managed month on month ASO for Indiabulls Securities<br/><br/>• Ranked for more than 25+ unranked keywords<br/><br/>• Improved app visibility and category ranking",
     image: "/casestudy3.png",
   },
 };

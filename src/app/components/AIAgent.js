@@ -36,7 +36,7 @@ const AIAgent = () => {
 
   const handlePrev = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + features.length) % features.length
+      (prevIndex) => (prevIndex - 2 + features.length) % features.length
     );
   };
 

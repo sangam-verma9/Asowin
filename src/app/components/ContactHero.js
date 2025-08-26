@@ -338,7 +338,7 @@ const ContactHero = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="Enter Your Email Address"
+                    placeholder="Enter your email address"
                     className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-1 focus:ring-gray-300 focus:border-gray-300"
                     required
                   />
