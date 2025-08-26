@@ -3,6 +3,8 @@
 import { useState } from "react";
 import OptimizedImage from "./OptimizedImage";
 import Navbar from "./Navbar";
+import Image from "next/image";
+
 
 const HeroSection = () => {
   const [email, setEmail] = useState("");
@@ -58,13 +60,17 @@ const HeroSection = () => {
 
       <section className="relative flex flex-col justify-center items-center text-center min-h-[calc(100vh-32px)] -mt-16 px-4 md:px-8 lg:px-12">
         {/* Background Pattern */}
-        <div
-          className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-50"
-          style={{
-            backgroundImage: `url('/pattern.png')`,
-            zIndex: "0",
-          }}
-        />
+        <div className="absolute inset-0 z-0 opacity-50">
+          <Image
+            src="/pattern.png"
+            alt=""
+            fill
+            priority
+            fetchPriority="high"
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
 
         <div className="relative z-10 max-w-4xl mt-32 mx-auto font-serif">
           <h1 className="text-4xl md:text-6xl lg:text-[135px] font-bold text-[#111111] mb-6 leading-tight">

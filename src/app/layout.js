@@ -69,7 +69,9 @@ export default function RootLayout({ children }) {
 
         {/* Preload critical images */}
         <link rel="preload" as="image" href="/pattern.png" />
+        <link rel="preload" as="image" href="/casestudy2.png" />
         <link rel="preload" as="image" href="/appversal.png" />
+        <link rel="preload" as="image" href="/phone.png" />
 
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="beforeInteractive">
