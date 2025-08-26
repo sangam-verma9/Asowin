@@ -55,16 +55,16 @@ const ASOSection4 = () => {
           </div>
 
           {/* Right content - Key Deliverables */}
-          <div className="lg:max-w-xs mt-8 sm:mt-12 lg:mt-auto">
-            <h2 className="text-white text-[18px] sm:text-[20px] lg:text-[24px] font-normal mb-4 sm:mb-6">Key Deliverables:</h2>
+          <div className="lg:max-w-lg mt-8 sm:mt-12 lg:mt-auto lg:pr-20">
+            <h2 className="text-white text-[18px] sm:text-[20px] lg:text-[24px] font-bold mb-4 sm:mb-6">Key Deliverables:</h2>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li className="text-[#ffffff] text-[9px] sm:text-[10px] lg:text-[11px] uppercase font-bold tracking-widest ">
+              <li className="text-[#ffffff] text-[9px] sm:text-[12px] lg:text-[14px] uppercase font-bold tracking-widest ">
                 • Campaign setup and management
               </li>
-              <li className="text-[#ffffff] text-[9px] sm:text-[10px] lg:text-[11px] uppercase font-bold tracking-widest">
+              <li className="text-[#ffffff] text-[9px] sm:text-[12px] lg:text-[14px] uppercase font-bold tracking-widest">
                 • Bid and keyword optimization
               </li>
-              <li className="text-[#ffffff] text-[9px] sm:text-[10px] lg:text-[11px] uppercase font-bold tracking-widest">
+              <li className="text-[#ffffff] text-[9px] sm:text-[12px] lg:text-[14px] uppercase font-bold tracking-widest">
                 • ROI tracking and reporting
               </li>
             </ul>

@@ -329,10 +329,10 @@ const CaseStudy = () => {
           </div>
 
           <div className="mb-8 lg:mb-16">
-            <div className="grid grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
+            <div className="grid grid-cols-2 gap-x-2 mb-8 sm:mb-12 w-[50%]">
               {activeData.stats.map((stat, index) => (
                 <div key={index}>
-                  <h3 className="text-3xl sm:text-[43px] leading-none font-medium font-serif mb-2">
+                  <h3 className="text-2xl sm:text-[43px] leading-none font-medium font-serif mb-2">
                     {stat.value}
                   </h3>
                   <p className="text-xs sm:text-[14px] text-black/60">
@@ -341,6 +341,7 @@ const CaseStudy = () => {
                 </div>
               ))}
             </div>
+
 
             <p
               className="text-sm sm:text-[16px] text-black/80"

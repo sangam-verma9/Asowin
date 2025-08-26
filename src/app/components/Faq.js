@@ -95,7 +95,7 @@ const Faq = () => {
               onClick={() => setOpenItem(openItem === faq.id ? null : faq.id)}
             >
               <div className="flex items-center gap-4">
-                <span className="text-[#014458] font-medium">{faq.id}</span>
+                <span className="text-[#014458] font-medium">{faq.id}.</span>
                 <h3 className="text-gray-800 font-medium text-[20px]">{faq.question}</h3>
               </div>
               <button 

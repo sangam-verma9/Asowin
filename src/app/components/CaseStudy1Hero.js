@@ -2,6 +2,7 @@
 
 import React from "react";
 import Navbar from "./Navbar";
+import Image from "next/image";
 
 const CaseStudy1Hero = () => {
   return (
@@ -9,12 +10,15 @@ const CaseStudy1Hero = () => {
       <Navbar />
 
       {/* Background Image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/blogbg1.png')`,
-        }}
-      />
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/blogbg1.png"
+          alt="" // decorative background → keep empty alt
+          fill
+          priority // preload if it's part of LCP
+          className="object-cover object-center"
+        />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />

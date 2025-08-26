@@ -4,6 +4,7 @@ import { useState } from "react";
 import OptimizedImage from "./OptimizedImage";
 import Navbar from "./Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const HeroSection = () => {
@@ -93,42 +94,30 @@ const HeroSection = () => {
           </div>
 
           {/* Form */}
-          <div className="flex justify-center items-center">
-            {/* Error Message */}
+          {/* <div className="flex justify-center items-center">
+
             {status.type === "error" && status.message && (
               <div className="w-full md:w-1/2 text-sm text-red-700 bg-red-100 p-2 rounded mb-4">
                 {status.message}
               </div>
             )}
 
-            {/* Success Message */}
             {status.type === "success" && status.message && (
               <div className="w-full md:w-1/2 text-sm text-green-700 bg-green-100 p-2 rounded mb-4">
                 {status.message}
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* Form Section */}
-          <form onSubmit={handleSubmit} className="flex items-center justify-center px-2 xs:px-4 mb-20">
-            <div className="flex items-center w-full max-w-[540px] bg-white rounded-full shadow-lg p-1.5 xs:p-3 gap-1 xs:gap-2">
-              <input
-                type="email"
-                placeholder="Enter your work email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="flex-grow px-2 xs:px-4 py-2 xs:py-3 rounded-full focus:outline-none text-gray-700 bg-transparent text-xs xs:text-sm md:text-base border border-gray-300"
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-auto bg-[#FF8712] text-white px-3 xs:px-4 py-2 xs:py-3 rounded-full font-medium hover:bg-orange-600 transition-colors whitespace-nowrap text-xs xs:text-sm md:text-base"
-              >
-                {loading ? "Submitting..." : "LET'S TALK"}
-              </button>
-            </div>
-          </form>
+          <div className="flex items-center justify-center px-2 xs:px-4 mb-20">
+            <Link
+              href="/contact"
+              className="w-auto md:w-[200px] bg-[#FF8712] text-white px-8 xs:px-4 py-3 xs:py-4 rounded-full font-medium hover:bg-orange-600 transition-colors whitespace-nowrap text-xs xs:text-sm md:text-base"
+            >
+              LET'S TALK
+            </Link>
+          </div>
         </div>
       </section>
     </div>

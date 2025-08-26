@@ -74,7 +74,7 @@ const ContactHero = () => {
     e.preventDefault();
     setLoading(true);
     setStatus({ type: "", message: "" });
-  
+
     // Validate email before submitting
     if (!isWorkEmail(formData.email)) {
       setStatus({
@@ -84,7 +84,7 @@ const ContactHero = () => {
       setLoading(false);
       return;
     }
-  
+
     const submitData = {
       name: formData.name,
       email: formData.email,
@@ -94,7 +94,7 @@ const ContactHero = () => {
       app: additionalFields.website || null,
       company: null
     };
-  
+
     try {
       const response = await fetch('https://form.appstorys.com/api/add-response/', {
         method: 'POST',
@@ -103,16 +103,16 @@ const ContactHero = () => {
         },
         body: JSON.stringify(submitData)
       });
-  
+
       if (response.status !== 201) {
         throw new Error('Failed to submit form');
       }
-  
+
       setStatus({
         type: "success",
         message: "Thank you for contacting us! We'll get back to you soon."
       });
-      
+
       setFormData({
         name: "",
         email: "",
@@ -122,13 +122,13 @@ const ContactHero = () => {
         app: null,
         company: null
       });
-      
+
       setAdditionalFields({
         phone: "",
         countryCode: "+1",
         website: ""
       });
-  
+
     } catch (error) {
       setStatus({
         type: "error",
@@ -141,9 +141,9 @@ const ContactHero = () => {
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div
-        className="w-full min-h-screen relative"
+        className="w-full min-h-[90vh] relative"
         id="form-section"
         style={{
           backgroundImage: `url('/contactbg.png')`,
@@ -160,7 +160,7 @@ const ContactHero = () => {
                 Contact Us
               </h1>
 
-              <p className="text-gray-600 text-lg mb-20">
+              <p className="text-black text-lg mb-10">
                 Contact ASOWin and our team will connect with you instantly
               </p>
 
@@ -168,15 +168,15 @@ const ContactHero = () => {
               <div className="space-y-8">
                 {/* Addresses */}
                 <div>
-                  <p className="text-sm text-gray-600 font-medium mb-4">
+                  <p className="text-sm text-black font-medium mb-4">
                     Company Addresses
                   </p>
                   <div className="space-y-4">
-                    {/* Mumbai Address */}
+                    {/* Delaware Address */}
                     <div className="flex items-start gap-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5 text-gray-600"
+                        className="w-5 h-5 text-black"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -193,7 +193,59 @@ const ContactHero = () => {
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                         />
                       </svg>
-                      <p className="text-base text-gray-600">
+                      <p className="text-base text-black">
+                        <span className="font-bold">Delaware:</span> 16192
+                        Coastal Hwy, Lewes, DE 19958, USA
+                      </p>
+                    </div>
+                    {/* California Address */}
+                    <div className="flex items-start gap-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5 text-black"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                      <p className="text-base text-black">
+                        <span className="font-bold">California:</span> 140 Black
+                        Mountain Cir, Fremont, California, USA - 94536
+                      </p>
+                    </div>
+                    {/* Mumbai Address */}
+                    <div className="flex items-start gap-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5 text-black"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                      <p className="text-base text-black">
                         <span className="font-bold">Mumbai:</span> Office #3,
                         Neelkanth, Next to Shreeji Heights, Sector 46A, Navi
                         Mumbai, Maharashtra, India - 400706
@@ -203,7 +255,7 @@ const ContactHero = () => {
                     <div className="flex items-start gap-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5 text-gray-600"
+                        className="w-5 h-5 text-black"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -220,62 +272,10 @@ const ContactHero = () => {
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                         />
                       </svg>
-                      <p className="text-base text-gray-600">
+                      <p className="text-base text-black">
                         <span className="font-bold">Noida:</span> Office #37,
                         Tapasya Corp Heights, Sector 126, Noida, Uttar Pradesh -
                         201301
-                      </p>
-                    </div>
-                    {/* Delaware Address */}
-                    <div className="flex items-start gap-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5 text-gray-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                      <p className="text-base text-gray-600">
-                        <span className="font-bold">Delaware:</span> 16192
-                        Coastal Hwy, Lewes, DE 19958, USA
-                      </p>
-                    </div>
-                    {/* California Address */}
-                    <div className="flex items-start gap-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5 text-gray-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                      <p className="text-base text-gray-600">
-                        <span className="font-bold">California:</span> 140 Black
-                        Mountain Cir, Fremont, California, USA - 94536
                       </p>
                     </div>
                   </div>
@@ -283,20 +283,20 @@ const ContactHero = () => {
 
                 {/* Email and Phone */}
                 <div>
-                  <p className="text-sm text-gray-600 font-medium mb-1">
+                  <p className="text-sm text-black font-medium mb-1">
                     Contact Us
                   </p>
                   <div className="flex items-center justify-between space-x-8">
                     <a
                       href="mailto:support@asowin.com"
-                      className="text-base text-gray-600 underline"
+                      className="text-base text-black underline"
                     >
                       support@asowin.com
                     </a>
-                    <div className="flex flex-col text-base text-gray-600">
-                      <h3>Phone:</h3>
+                    <div className="flex flex-col text-base text-black">
+                      {/* <h3>Phone:</h3> */}
                       <p>+1 510-365-7173 (USA)</p>
-                      <p>+91 9619963340 (India)</p>
+                      {/* <p>+91 9619963340 (India)</p> */}
                     </div>
                   </div>
                 </div>
@@ -313,7 +313,7 @@ const ContactHero = () => {
                 )}
 
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
                     FULL NAME*
                   </label>
                   <input
@@ -322,14 +322,14 @@ const ContactHero = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Enter Your Full Name"
+                    placeholder="Enter your full name"
                     className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-1 focus:ring-gray-300 focus:border-gray-300"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                     EMAIL ADDRESS*
                   </label>
                   <input
@@ -345,7 +345,7 @@ const ContactHero = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
                     ADDITIONAL MESSAGE
                   </label>
                   <textarea
@@ -355,7 +355,7 @@ const ContactHero = () => {
                     onChange={handleInputChange}
                     rows="3"
                     placeholder="Please provide any additional details about your request"
-                    className="w-full px-4 py-3 border border-gray-200 rounded focus:ring-1 focus:ring-gray-300 focus:border-gray-300 resize-none"
+                    className="w-full min-h-[150px] px-4 py-3 border border-gray-200 rounded focus:ring-1 focus:ring-gray-300 focus:border-gray-300 resize-none"
                   ></textarea>
                 </div>
 

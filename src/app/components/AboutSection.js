@@ -41,7 +41,7 @@ const AboutSection = () => {
           clearInterval(interval);
           return prev;
         });
-      }, 20);
+      }, 10);
 
       return () => clearInterval(interval);
     }
